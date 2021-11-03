@@ -24,10 +24,15 @@ class MyappBar extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:<Widget>[
-                    Image.asset('assets/images/logo.png',
-                      height: 160,
+                    Container(
+                      child:Image.asset('assets/images/logo.png',
+                      height: 160,),
                     ),
-                    SizedBox(width: 10,),
+                    Container(
+                      child:Image.asset('assets/images/fatec.jpg',
+                      height: 160,),
+                    ),
+                    SizedBox(width: 15,),
                   ],
                 ),
                 Icon(!showMenu ? Icons.expand_more : Icons.expand_less)

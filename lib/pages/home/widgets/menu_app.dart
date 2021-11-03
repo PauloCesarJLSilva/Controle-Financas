@@ -16,8 +16,12 @@ class MenuApp extends StatelessWidget {
         duration: Duration(milliseconds: 200),
         opacity: showMenu ? 1: 0,
         child: Container(
-          child: Image.asset('assets/images/menu.png'),
           height: MediaQuery.of(context).size.height * 0.5,
+          child: Column(
+            children: <Widget>[
+              
+            ],
+          ),
         ),
       ),
     );
