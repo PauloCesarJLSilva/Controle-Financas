@@ -1,3 +1,4 @@
+import 'package:controle_financeiro/pages/home/widgets/menu_app.dart';
 import 'package:controle_financeiro/pages/home/widgets/my_app_bar.dart';
 import 'package:controle_financeiro/pages/home/widgets/my_dots_app.dart';
 import 'package:controle_financeiro/pages/home/widgets/page_view_app.dart';
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> {
         alignment: Alignment.topCenter,
         children: <Widget>[
           MyappBar(
+
             showMenu: _showMenu,
             onTap: (){
               setState(() {
@@ -37,6 +39,10 @@ class _HomePageState extends State<HomePage> {
                 _yPosition = _showMenu ? _screenHeigth * .82 : _screenHeigth * .29;
               });
             },
+          ),
+          MenuApp(
+            top: _screenHeigth * 0.29,
+            showMenu: _showMenu,
           ),
           PageViewApp(
             showMenu: _showMenu,
@@ -84,7 +90,8 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MyDotsApp(
-            top: _screenHeigth * 0.80,
+            showMenu: _showMenu,
+            top: _screenHeigth * 0.82,
             currentIndex: _currentIndex
           ),
         ],
