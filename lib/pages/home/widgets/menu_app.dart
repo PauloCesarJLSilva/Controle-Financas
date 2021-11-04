@@ -1,3 +1,4 @@
+import 'package:controle_financeiro/pages/home/widgets/item_menu.dart';
 import 'package:flutter/material.dart';
 
 class MenuApp extends StatelessWidget {
@@ -19,7 +20,15 @@ class MenuApp extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.5,
           child: Column(
             children: <Widget>[
-              
+              Image.asset('assets/images/logo.png',height: 120),
+              Container(height: 20),
+              SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    ItemMenu(),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
