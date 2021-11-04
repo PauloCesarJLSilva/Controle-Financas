@@ -23,10 +23,18 @@ class MenuApp extends StatelessWidget {
               Image.asset('assets/images/logo.png',height: 120),
               Container(height: 20),
               SingleChildScrollView(
-                child: Column(
-                  children: <Widget>[
-                    ItemMenu(),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Column(
+                    children: <Widget>[
+                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                    ],
+                  ),
                 ),
               ),
             ],
