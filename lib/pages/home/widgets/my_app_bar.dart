@@ -26,10 +26,10 @@ class MyappBar extends StatelessWidget {
                   children:<Widget>[
                     Container(
                       child:Image.asset('assets/images/fatec.png',
-                      width: 460,
+                      width: 270,
                       ),
                     ),
-                    SizedBox(width: 15,),
+                    SizedBox(height: 15,),
                   ],
                 ),
                 Icon(!showMenu ? Icons.expand_more : Icons.expand_less)

@@ -20,19 +20,16 @@ class MenuApp extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.5,
           child: Column(
             children: <Widget>[
-              Image.asset('assets/images/logo.png',height: 120),
-              Container(height: 20),
+              Container(height: 80),
               SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
-                    children: <Widget>[
+                    children: <Widget>[                
                       ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Prefil'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Conta'),
+                      ItemMenu(icon: Icons.info_outline, text: 'Configuração'),
                     ],
                   ),
                 ),
