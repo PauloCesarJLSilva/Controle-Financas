@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late bool _showMenu;
   late int _currentIndex;
-  late double _yPosition = 188;
+  late double _yPosition = 195;
 
   @override
   void initState() {
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MenuApp(
-            top: _screenHeigth * 0.29,
+            top: _screenHeigth * 0.30,
             showMenu: _showMenu,
           ),
           PageViewApp(
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             },
             onPanUpdate: (details){
               double positionBottomLimit = _screenHeigth * .82;
-              double positionTopLimit = _screenHeigth * .29;
+              double positionTopLimit = _screenHeigth * .30;
               double midlePosition = (positionBottomLimit-positionTopLimit)/2;
               setState(() {
                 print(_yPosition.toString());

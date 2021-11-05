@@ -25,11 +25,24 @@ class MenuApp extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
-                    children: <Widget>[                
-                      ItemMenu(icon: Icons.info_outline, text: 'Ajuda'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Prefil'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Conta'),
-                      ItemMenu(icon: Icons.info_outline, text: 'Configuração'),
+                    children: <Widget>[
+                      ItemMenu(icon: Icons.info, text: 'Ajuda'),
+                      SizedBox(height: 12,),
+                      ItemMenu(icon: Icons.person, text: 'Perfil'),
+                      SizedBox(height: 12,),
+                      ItemMenu(icon: Icons.settings, text: 'Conta'),
+                      SizedBox(height: 12,),
+                      ItemMenu(icon: Icons.phone_android, text: 'Configuração'),
+                      SizedBox(height: 12,),
+                      ElevatedButton(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[        
+                          Text('SAIR', style: TextStyle(fontSize: 15),),
+                          ]
+                        ),
+                        onPressed: (){},
+                      ),
                     ],
                   ),
                 ),
