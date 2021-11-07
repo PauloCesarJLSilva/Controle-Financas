@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late bool _showMenu;
   late int _currentIndex;
-  late double _yPosition = 195;
+  late double _yPosition = 220;
 
   @override
   void initState() {

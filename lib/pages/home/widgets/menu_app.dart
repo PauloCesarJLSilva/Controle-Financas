@@ -35,7 +35,10 @@ class MenuApp extends StatelessWidget {
                       ItemMenu(icon: Icons.phone_android, text: 'Configuração'),
                       SizedBox(height: 12,),
                       ElevatedButton(
-                      child: Row(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.blue[900],
+                        ),
+                        child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[        
                           Text('SAIR', style: TextStyle(fontSize: 15),),
