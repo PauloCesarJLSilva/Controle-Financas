@@ -1,3 +1,4 @@
+import 'package:controle_financeiro/pages/home/widgets/item_menu_bottom.dart';
 import 'package:controle_financeiro/pages/home/widgets/menu_app.dart';
 import 'package:controle_financeiro/pages/home/widgets/my_app_bar.dart';
 import 'package:controle_financeiro/pages/home/widgets/my_dots_app.dart';
@@ -100,25 +101,26 @@ class _HomePageState extends State<HomePage> {
             right: 0,
             height: 100,
             child: Container(
-              color: Colors.red,
               child: ListView(
+                physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
-                    child: Container(
-                      width: 120,
-                      color: Colors.white
-                    ),
+                  ItemMenuBottom(
+                    icon: Icons.person,
+                    text: 'Texto',
+                  ),   
+                  ItemMenuBottom(
+                    icon: Icons.person,
+                    text: 'Texto',
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
-                    child: Container(
-                      width: 120,
-                      color: Colors.white
-                    ),
+                  ItemMenuBottom(
+                    icon: Icons.person,
+                    text: 'Texto',
                   ),
-                  
+                  ItemMenuBottom(
+                    icon: Icons.person,
+                    text: 'Texto',
+                  ),          
                 ],
               ),
             ),
