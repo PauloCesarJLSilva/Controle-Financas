@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late bool _showMenu;
   late int _currentIndex;
-  late double _yPosition = 220;
+  late double _yPosition = 194;
 
   @override
   void initState() {
@@ -91,8 +91,37 @@ class _HomePageState extends State<HomePage> {
           ),
           MyDotsApp(
             showMenu: _showMenu,
-            top: _screenHeigth * 0.82,
+            top: _screenHeigth * 0.81,
             currentIndex: _currentIndex
+          ),
+          Positioned(
+            bottom: 0 + MediaQuery.of(context).padding.bottom,
+            left: 0,
+            right: 0,
+            height: 100,
+            child: Container(
+              color: Colors.red,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+                    child: Container(
+                      width: 120,
+                      color: Colors.white
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+                    child: Container(
+                      width: 120,
+                      color: Colors.white
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ),
           ),
         ],
       ),
