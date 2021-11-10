@@ -21,25 +21,23 @@ class MenuApp extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(height: 80),
-              SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Column(
-                    children: <Widget>[
-                      ItemMenu(icon: Icons.info, text: 'Ajuda'),
-                      SizedBox(height: 12,),
-                      ItemMenu(icon: Icons.person, text: 'Perfil'),
-                      SizedBox(height: 12,),
-                      ItemMenu(icon: Icons.settings, text: 'Conta'),
-                      SizedBox(height: 12,),
-                      ItemMenu(icon: Icons.credit_card, text: 'Cartão'),
-                      SizedBox(height: 12,),
-                      ItemMenu(icon: Icons.phone_android, text: 'Configuração'),
-                      SizedBox(height: 12,),
-                      ItemMenu(icon: Icons.exit_to_app, text: 'SAIR'),
-                      SizedBox(height: 12,),
-                    ],
-                  ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column(
+                  children: <Widget>[
+                    ItemMenu(icon: Icons.info, text: 'Ajuda'),
+                    SizedBox(height: 12,),
+                    ItemMenu(icon: Icons.person, text: 'Perfil'),
+                    SizedBox(height: 12,),
+                    ItemMenu(icon: Icons.settings, text: 'Conta'),
+                    SizedBox(height: 12,),
+                    ItemMenu(icon: Icons.credit_card, text: 'Cartão'),
+                    SizedBox(height: 12,),
+                    ItemMenu(icon: Icons.phone_android, text: 'Configuração'),
+                    SizedBox(height: 12,),
+                    ItemMenu(icon: Icons.exit_to_app, text: 'SAIR'),
+                    SizedBox(height: 12,),
+                  ],
                 ),
               ),
             ],

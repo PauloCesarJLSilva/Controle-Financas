@@ -101,51 +101,54 @@ class _HomePageState extends State<HomePage> {
             left: 0,
             right: 0,
             height: 120,
-            child: AnimatedOpacity(
-              duration: Duration(milliseconds: 400),
-              opacity: !_showMenu ? 1 : 0,
-              child: Container(
-                child: ListView(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    ItemMenuBottom(
-                      icon: Icons.person_add,
-                      text: 'Indicar amigos',
-                    ),   
-                    ItemMenuBottom(
-                      icon: Icons.phone_android_rounded,
-                      text: 'Recarga de celular',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.chat,
-                      text: 'Cobrar',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.monetization_on,
-                      text: 'Empréstimos',
-                    ), 
-                    ItemMenuBottom(
-                      icon: Icons.move_to_inbox,
-                      text: 'Depositar',
-                    ),
-                    ItemMenuBottom(
-                      icon: Icons.transform,
-                      text: 'Transferir',
-                    ),    
-                    ItemMenuBottom(
-                      icon: Icons.auto_graph_rounded,
-                      text: 'Ajustar limite',
-                    ),  
-                    ItemMenuBottom(
-                      icon: Icons.money_rounded,
-                      text: 'Pagar',
-                    ),  
-                    ItemMenuBottom(
-                      icon: Icons.lock_open,
-                      text: 'Bloquear cartão',
-                    ),
-                  ],
+            child: IgnorePointer(
+              ignoring: _showMenu,
+              child: AnimatedOpacity(
+                duration: Duration(milliseconds: 400),
+                opacity: !_showMenu ? 1 : 0,
+                child: Container(
+                  child: ListView(
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      ItemMenuBottom(
+                        icon: Icons.person_add,
+                        text: 'Indicar amigos',
+                      ),   
+                      ItemMenuBottom(
+                        icon: Icons.phone_android_rounded,
+                        text: 'Recarga de celular',
+                      ),
+                      ItemMenuBottom(
+                        icon: Icons.chat,
+                        text: 'Cobrar',
+                      ),
+                      ItemMenuBottom(
+                        icon: Icons.monetization_on,
+                        text: 'Empréstimos',
+                      ), 
+                      ItemMenuBottom(
+                        icon: Icons.move_to_inbox,
+                        text: 'Depositar',
+                      ),
+                      ItemMenuBottom(
+                        icon: Icons.transform,
+                        text: 'Transferir',
+                      ),    
+                      ItemMenuBottom(
+                        icon: Icons.auto_graph_rounded,
+                        text: 'Ajustar limite',
+                      ),  
+                      ItemMenuBottom(
+                        icon: Icons.money_rounded,
+                        text: 'Pagar',
+                      ),  
+                      ItemMenuBottom(
+                        icon: Icons.lock_open,
+                        text: 'Bloquear cartão',
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
