@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late bool _showMenu;
   late int _currentIndex;
-  late double _yPosition = 194;
+  late double _yPosition = 215;
 
   @override
   void initState() {
@@ -37,12 +37,12 @@ class _HomePageState extends State<HomePage> {
             onTap: (){
               setState(() {
                 _showMenu = !_showMenu;
-                _yPosition = _showMenu ? _screenHeigth * .82 : _screenHeigth * .29;
+                _yPosition = _showMenu ? _screenHeigth * .81 : _screenHeigth * .31;
               });
             },
           ),
           MenuApp(
-            top: _screenHeigth * 0.30,
+            top: _screenHeigth * 0.31,
             showMenu: _showMenu,
           ),
           PageViewApp(
@@ -54,8 +54,8 @@ class _HomePageState extends State<HomePage> {
               });
             },
             onPanUpdate: (details){
-              double positionBottomLimit = _screenHeigth * .82;
-              double positionTopLimit = _screenHeigth * .30;
+              double positionBottomLimit = _screenHeigth * .81;
+              double positionTopLimit = _screenHeigth * .31;
               double midlePosition = (positionBottomLimit-positionTopLimit)/2;
               setState(() {
                 print(_yPosition.toString());
@@ -92,36 +92,61 @@ class _HomePageState extends State<HomePage> {
           ),
           MyDotsApp(
             showMenu: _showMenu,
-            top: _screenHeigth * 0.81,
+            top: _screenHeigth * 0.805,
             currentIndex: _currentIndex
           ),
-          Positioned(
-            bottom: 0 + MediaQuery.of(context).padding.bottom,
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 300),
+            bottom: !_showMenu ? 0 + MediaQuery.of(context).padding.bottom : -50,
             left: 0,
             right: 0,
-            height: 100,
-            child: Container(
-              child: ListView(
-                physics: BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  ItemMenuBottom(
-                    icon: Icons.person,
-                    text: 'Texto',
-                  ),   
-                  ItemMenuBottom(
-                    icon: Icons.person,
-                    text: 'Texto',
-                  ),
-                  ItemMenuBottom(
-                    icon: Icons.person,
-                    text: 'Texto',
-                  ),
-                  ItemMenuBottom(
-                    icon: Icons.person,
-                    text: 'Texto',
-                  ),          
-                ],
+            height: 120,
+            child: AnimatedOpacity(
+              duration: Duration(milliseconds: 400),
+              opacity: !_showMenu ? 1 : 0,
+              child: Container(
+                child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    ItemMenuBottom(
+                      icon: Icons.person_add,
+                      text: 'Indicar amigos',
+                    ),   
+                    ItemMenuBottom(
+                      icon: Icons.phone_android,
+                      text: 'Recarga de celular',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.chat,
+                      text: 'Cobrar',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.monetization_on,
+                      text: 'Empréstimos',
+                    ), 
+                    ItemMenuBottom(
+                      icon: Icons.move_to_inbox,
+                      text: 'Depositar',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.mobile_screen_share,
+                      text: 'Transferir',
+                    ),    
+                    ItemMenuBottom(
+                      icon: Icons.format_align_center,
+                      text: 'Ajustar limite',
+                    ),  
+                    ItemMenuBottom(
+                      icon: Icons.chrome_reader_mode,
+                      text: 'Pagar',
+                    ),  
+                    ItemMenuBottom(
+                      icon: Icons.lock_open,
+                      text: 'Bloquear cartão',
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -26,7 +26,7 @@ class ItemMenuBottom extends StatelessWidget {
               ],
             ),
         ),
-        width: 120,
+        width: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: Colors.white24
