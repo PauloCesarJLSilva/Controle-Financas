@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MenuApp(
-            top: _screenHeigth * 0.31,
+            top: _screenHeigth * 0.29,
             showMenu: _showMenu,
           ),
           PageViewApp(
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                       text: 'Indicar amigos',
                     ),   
                     ItemMenuBottom(
-                      icon: Icons.phone_android,
+                      icon: Icons.phone_android_rounded,
                       text: 'Recarga de celular',
                     ),
                     ItemMenuBottom(
@@ -130,15 +130,15 @@ class _HomePageState extends State<HomePage> {
                       text: 'Depositar',
                     ),
                     ItemMenuBottom(
-                      icon: Icons.mobile_screen_share,
+                      icon: Icons.transform,
                       text: 'Transferir',
                     ),    
                     ItemMenuBottom(
-                      icon: Icons.format_align_center,
+                      icon: Icons.auto_graph_rounded,
                       text: 'Ajustar limite',
                     ),  
                     ItemMenuBottom(
-                      icon: Icons.chrome_reader_mode,
+                      icon: Icons.money_rounded,
                       text: 'Pagar',
                     ),  
                     ItemMenuBottom(
